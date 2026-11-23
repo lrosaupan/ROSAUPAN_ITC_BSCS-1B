@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Louis’ Assignments</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Louis’ Assignments</h1>
+  <nav>
+    <a href="#assignment1">Assignment #1</a>
+    <a href="#assignment2">Assignment #2</a>
+    <a href="#assignment3">Assignment #3</a>
+    <a href="#assignment4">Assignment #4</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ASSIGNMENT 1 -->
+  <section id="assignment1">
+    <h2><span>Assignment 1</span>Unit Converter</h2>
+    <p>Convert temperature and length in both directions.</p>
+    <div class="grid">
+      <div class="box">
+        <h3>Celsius to Fahrenheit</h3>
+        <label for="celsius">Celsius (&deg;C)</label>
+        <input type="number" id="celsius" step="any">
+        <div class="buttons"><button onclick="celsiusToFahrenheit()">Convert</button></div>
+        <div class="result" id="resultCelsiusFahrenheit"></div>
+      </div>
+      <div class="box">
+        <h3>Fahrenheit to Celsius</h3>
+        <label for="fahrenheit">Fahrenheit (&deg;F)</label>
+        <input type="number" id="fahrenheit" step="any">
+        <div class="buttons"><button onclick="fahrenheitToCelsius()">Convert</button></div>
+        <div class="result" id="resultFahrenheitCelsius"></div>
+      </div>
+      <div class="box">
+        <h3>Meters to Feet</h3>
+        <label for="meters">Meters (m)</label>
+        <input type="number" id="meters" step="any">
+        <div class="buttons"><button onclick="metersToFeet()">Convert</button></div>
+        <div class="result" id="resultMetersFeet"></div>
+      </div>
+      <div class="box">
+        <h3>Feet to Meters</h3>
+        <label for="feet">Feet (ft)</label>
+        <input type="number" id="feet" step="any">
+        <div class="buttons"><button onclick="feetToMeters()">Convert</button></div>
+        <div class="result" id="resultFeetMeters"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSIGNMENT 2 -->
+  <section id="assignment2">
+    <h2><span>Assignment 2</span>Income Tax Calculator</h2>
+    <p>Enter your annual income to see the tax and what’s left after tax.</p>
+    <label for="income">Annual Taxable Income:</label>
+    <div class="row">
+      <input type="number" id="income" step="any" min="0" placeholder="Enter income in PHP">
+      <button onclick="computeTax()">Compute</button>
+    </div>
+    <div class="result" id="resultTax">
+      Annual Income: PHP ?<br>
+      Income Tax: PHP ?<br>
+      Income After Tax: PHP ?
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Annual Income</th><th>Tax</th></tr>
+        <tr><td>250,000 and below</td><td>0</td></tr>
+        <tr><td>Over 250,000 to 400,000</td><td>15% of the excess over 250,000</td></tr>
+        <tr><td>Over 400,000 to 800,000</td><td>22,500 + 20% of the excess over 400,000</td></tr>
+        <tr><td>Over 800,000 to 2,000,000</td><td>102,500 + 25% of the excess over 800,000</td></tr>
+        <tr><td>Over 2,000,000 to 8,000,000</td><td>402,500 + 30% of the excess over 2,000,000</td></tr>
+        <tr><td>Over 8,000,000</td><td>2,202,500 + 35% of the excess over 8,000,000</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ASSIGNMENT 3 -->
+  <section id="assignment3">
+    <h2><span>Assignment 3</span>Loops</h2>
+    <p>Enter a positive whole number, then pick a loop.</p>
+    <label for="n">Number (n)</label>
+    <input type="number" id="n" min="1" step="1">
+    <div class="buttons">
+      <button onclick="factorial()">Factorial (while)</button>
+      <button onclick="sum()">Sum (do while)</button>
+      <button onclick="average()">Average (for)</button>
+    </div>
+    <div class="result" id="resultLoops"></div>
+  </section>
+
+  <!-- ASSIGNMENT 4 -->
+  <section id="assignment4">
+    <h2><span>Assignment 4</span>Payroll</h2>
+    <p>Hours past 40 are paid at 1.5x. SSS, PhilHealth, and Pag-IBIG are deducted from gross pay.</p>
+    <label for="name">Employee name</label>
+    <input type="text" id="name">
+    <label for="hours">Hours worked</label>
+    <input type="number" id="hours" min="0" step="any">
+    <label for="rate">Hourly rate (PHP)</label>
+    <input type="number" id="rate" min="0" step="any">
+    <div class="buttons">
+      <button onclick="computePay()">Compute pay</button>
+      <button onclick="clearAll()">Clear</button>
+    </div>
+    <div class="result" id="resultPayroll">
+      <span>Employee: ?</span><br>
+      Regular Pay (hrs): ?<br>
+      Overtime Pay (hrs): ?<br>
+      Gross Pay: ?<br>
+      SSS (4.5%): ?<br>
+      PhilHealth (2.5%): ?<br>
+      Pag-IBIG (2%): ?<br>
+      Total Deductions: ?<br>
+      <span>Net Pay: ?</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>Louis’ Assignments · Built with HTML, CSS and JavaScript</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
